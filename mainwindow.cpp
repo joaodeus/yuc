@@ -9,13 +9,32 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    modelCategories = new QStringListModel(this);
+
+   /* Categories_units units;
+    units.m_category = "Temperature";
+    units.m_units.append("Celsius = Kelvin - 273.15");
+    units.m_units.append("Kelvin = Celsius + 273.15");
+
+    m_CategoriesUnits_List.append(units);
+
+    Categories_units units2;
+    units2.m_category = "Distance";
+    units2.m_units.append("kilometer = 1000 * meter");
+    units2.m_units.append("meter = 0.001 * kilometer");
+
+    m_CategoriesUnits_List.append(units2);
+*/
+    m_tableModelCategoriesUnits = new TableModelUnits(this);
+
+
+    ui->tableView_units->setModel(m_tableModelCategoriesUnits);
+
 
 }
 
 MainWindow::~MainWindow()
 {
-    delete modelCategories;
+
     delete ui;
 }
 
@@ -71,6 +90,11 @@ void MainWindow::showExpanded()
 #else
     show();
 #endif
+}
+
+void MainWindow::showEvent(QShowEvent * event)
+{
+    //ui->tableWidget_units_results->setRowCount(m_CategoriesUnits_List.length());
 }
 
 void MainWindow::on_actionEdit_triggered()

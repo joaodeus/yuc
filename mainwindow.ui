@@ -18,7 +18,7 @@
     <item row="0" column="0">
      <widget class="QComboBox" name="comboBox"/>
     </item>
-    <item row="2" column="0">
+    <item row="3" column="0">
      <widget class="QFrame" name="frame">
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -184,22 +184,13 @@
         </widget>
        </item>
       </layout>
-      <zorder>pushButton_0</zorder>
-      <zorder>pushButton_5</zorder>
-      <zorder>pushButton_dot</zorder>
-      <zorder>pushButton_6</zorder>
-      <zorder>pushButton_del</zorder>
-      <zorder>pushButton_8</zorder>
-      <zorder>pushButton_3</zorder>
-      <zorder>pushButton_7</zorder>
-      <zorder>pushButton_9</zorder>
-      <zorder>pushButton_4</zorder>
-      <zorder>pushButton_1</zorder>
-      <zorder>pushButton_2</zorder>
      </widget>
     </item>
     <item row="1" column="0">
      <widget class="QTableWidget" name="tableWidget_units_results"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QTableView" name="tableView_units"/>
     </item>
    </layout>
   </widget>

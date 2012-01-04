@@ -23,13 +23,13 @@ symbian:TARGET.CAPABILITY += NetworkServices
 # MOBILITY +=
 
 SOURCES += main.cpp mainwindow.cpp \
-    categoriemodel.cpp \
     unitsettings.cpp \
-    categories_units/categories_units.cpp
+    categories_units/categories_units.cpp \
+    tablemodelunits.cpp
 HEADERS += mainwindow.h \
-    categoriemodel.h \
     unitsettings.h \
-    categories_units/categories_units.h
+    categories_units/categories_units.h \
+    tablemodelunits.h
 FORMS += mainwindow.ui \
     unitsettings.ui
 
