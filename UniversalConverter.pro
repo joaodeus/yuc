@@ -25,11 +25,23 @@ symbian:TARGET.CAPABILITY += NetworkServices
 SOURCES += main.cpp mainwindow.cpp \
     unitsettings.cpp \
     categories_units/categories_units.cpp \
-    tablemodelunits.cpp
+    tablemodelunits.cpp \
+    globalfunctions.cpp \
+    categories_units/units.cpp \
+    math/calculadora.cpp \
+    math/complexdata.cpp \
+    math/complexo.cpp \
+    math/array_math.cpp
 HEADERS += mainwindow.h \
     unitsettings.h \
     categories_units/categories_units.h \
-    tablemodelunits.h
+    tablemodelunits.h \
+    globalfunctions.h \
+    categories_units/units.h \
+    math/calculadora.h \
+    math/complexdata.h \
+    math/complexo.h \
+    math/array_math.h
 FORMS += mainwindow.ui \
     unitsettings.ui
 

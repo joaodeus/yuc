@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 
 #include <QtCore/QCoreApplication>
+#include <QDebug>
 #include "unitsettings.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -9,26 +10,31 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    Categories_units units;
+    units.setCategory("Temperature");
+    units.addConvertion("Celsius = Kelvin - 273.15");
+    units.addConvertion("Kelvin = Celsius + 273.15");
+    units.addConvertion("Fahrenheit = Celsius * 1.8 + 32");
+    units.addConvertion("Celsius = Fahrenheit+4");
 
-   /* Categories_units units;
-    units.m_category = "Temperature";
-    units.m_units.append("Celsius = Kelvin - 273.15");
-    units.m_units.append("Kelvin = Celsius + 273.15");
 
-    m_CategoriesUnits_List.append(units);
 
     Categories_units units2;
-    units2.m_category = "Distance";
-    units2.m_units.append("kilometer = 1000 * meter");
-    units2.m_units.append("meter = 0.001 * kilometer");
+    units2.setCategory("Distance");
+    units2.addConvertion("m = 0.001*Km");
+    units2.addConvertion("Km = 1000*m");
 
+    m_CategoriesUnits_List.append(units);
     m_CategoriesUnits_List.append(units2);
-*/
-    m_tableModelCategoriesUnits = new TableModelUnits(this);
 
 
-    ui->tableView_units->setModel(m_tableModelCategoriesUnits);
+    int current_category_index=0;
+    setComboBoxCategories(current_category_index);
+    setTableWidgetUnits(*ui->tableWidget_units_results, m_CategoriesUnits_List[current_category_index]);
 
+
+   // m_tableModelCategoriesUnits = new TableModelUnits(this);
+    //ui->tableView_units->setModel(m_tableModelCategoriesUnits);
 
 }
 
@@ -36,6 +42,43 @@ MainWindow::~MainWindow()
 {
 
     delete ui;
+}
+
+bool MainWindow::setTableWidgetUnits(QTableWidget &table, Categories_units &units)
+{
+
+    table.setRowCount(units.getUnitsCount());
+    table.setColumnCount(2);
+
+    for (int l=0;l<units.getUnitsCount();l++)
+    {
+        if (table.item(l,0) == 0)
+        {
+            QTableWidgetItem *newItem = new QTableWidgetItem();
+            table.setItem(l,0, newItem);
+        }
+        table.item(l,0)->setText(units.m_units.getUnitsAt(l));
+        table.item(l,0)->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
+    }
+
+    return true;
+}
+
+
+void MainWindow::setComboBoxCategories(int &current_index)
+{
+    ui->comboBox_categories->clear();
+
+    for(int i=0;i<m_CategoriesUnits_List.size();i++)
+    {
+        ui->comboBox_categories->addItem(m_CategoriesUnits_List[i].m_category);
+    }
+
+    if (current_index < ui->comboBox_categories->count())
+        ui->comboBox_categories->setCurrentIndex(current_index);
+    else
+        current_index=-1;
+
 }
 
 void MainWindow::setOrientation(ScreenOrientation orientation)
@@ -95,10 +138,47 @@ void MainWindow::showExpanded()
 void MainWindow::showEvent(QShowEvent * event)
 {
     //ui->tableWidget_units_results->setRowCount(m_CategoriesUnits_List.length());
+
+
 }
 
 void MainWindow::on_actionEdit_triggered()
 {
     UnitSettings dlg;
     dlg.exec();
+}
+
+void MainWindow::on_comboBox_currentIndexChanged(const QString &arg1)
+{
+
+}
+
+void MainWindow::on_comboBox_categories_currentIndexChanged(int index)
+{
+    current_category_index=index;
+    setTableWidgetUnits(*ui->tableWidget_units_results, m_CategoriesUnits_List[index]);
+}
+
+void MainWindow::on_tableWidget_units_results_itemChanged(QTableWidgetItem *item)
+{
+    qDebug()<<item->text();
+    qDebug()<<item->row();
+    QStringList result = m_CategoriesUnits_List[current_category_index].m_units.setValue(item->text(), item->row());
+
+    setTableWidgetSolutions(result);
+
+}
+
+void MainWindow::setTableWidgetSolutions(QStringList &solutions)
+{
+
+    for (int l=0;l<solutions.size();l++)
+    {
+        if (ui->tableWidget_units_results->item(l,1) == 0)
+        {
+            QTableWidgetItem *newItem = new QTableWidgetItem();
+            ui->tableWidget_units_results->setItem(l,1, newItem);
+        }
+        ui->tableWidget_units_results->item(l,1)->setText(solutions.at(l));
+    }
 }
