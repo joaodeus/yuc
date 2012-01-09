@@ -8,7 +8,7 @@ bool Units::setConvertion_and_Units(QString m_convertion)
 {
     Calculadora calc;
     QStringList variables;
-    if (calc.isConvertion_equation(m_convertion, variables))
+    if (!calc.isConvertion_equation(m_convertion, variables))
     {
         return false;
     }
@@ -22,6 +22,11 @@ bool Units::setConvertion_and_Units(QString m_convertion)
 QString Units::getUnitsAt(int i)
 {
     return m_units.at(i);
+}
+
+QString Units::getConvertionsAt(int i)
+{
+    return m_convertions.at(i);
 }
 
 void Units::addConvertion(QString &convertion)
@@ -48,12 +53,26 @@ QStringList Units::setValue(QString value, int unit_index)
     if (unit_index >= m_units.size())
         return QStringList();
 
+    QStringList list_results;
     Calculadora calc;
     double x = calc.f(value).r;
     if (calc.ERRO)
-        return QStringList();
+    {
+        /*
+        for (int i=0;i<m_units.size();i++)
+        {
+            list_results.append("");
 
-    QStringList list_results;
+            if (i != unit_index)
+                list_results[i]="";
+            else
+                list_results[i]=value;
+        }*/
+        return list_results;
+    }
+
+
+
     QStringList list_var;
 
     QString unit_selected = m_units.at(unit_index);
@@ -74,9 +93,16 @@ QStringList Units::setValue(QString value, int unit_index)
                     Complexo y = calc.fx(conversion_formula[1],x,unit_selected);
 
                     if (calc.ERRO)
-                        return QStringList();
+                    {
+                        list_results[i]="Convertion formula error!!!";
+                    }
+                    else
+                    {
+                        list_results[i]=ComplexoToQString(y);
+                    }
 
-                    list_results[i]=ComplexoToQString(y);
+
+
 
                 }
             }

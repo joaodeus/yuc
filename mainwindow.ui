@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
@@ -38,6 +41,9 @@
          <property name="text">
           <string>0</string>
          </property>
+         <property name="shortcut">
+          <string>0</string>
+         </property>
         </widget>
        </item>
        <item row="1" column="1">
@@ -49,6 +55,9 @@
           </sizepolicy>
          </property>
          <property name="text">
+          <string>5</string>
+         </property>
+         <property name="shortcut">
           <string>5</string>
          </property>
         </widget>
@@ -64,6 +73,9 @@
          <property name="text">
           <string>.</string>
          </property>
+         <property name="shortcut">
+          <string>.</string>
+         </property>
         </widget>
        </item>
        <item row="1" column="2">
@@ -75,6 +87,9 @@
           </sizepolicy>
          </property>
          <property name="text">
+          <string>6</string>
+         </property>
+         <property name="shortcut">
           <string>6</string>
          </property>
         </widget>
@@ -90,6 +105,9 @@
          <property name="text">
           <string>Del</string>
          </property>
+         <property name="shortcut">
+          <string>Backspace</string>
+         </property>
         </widget>
        </item>
        <item row="0" column="1">
@@ -101,6 +119,9 @@
           </sizepolicy>
          </property>
          <property name="text">
+          <string>8</string>
+         </property>
+         <property name="shortcut">
           <string>8</string>
          </property>
         </widget>
@@ -116,6 +137,9 @@
          <property name="text">
           <string>3</string>
          </property>
+         <property name="shortcut">
+          <string>3</string>
+         </property>
         </widget>
        </item>
        <item row="0" column="0">
@@ -126,7 +150,13 @@
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
          <property name="text">
+          <string>7</string>
+         </property>
+         <property name="shortcut">
           <string>7</string>
          </property>
         </widget>
@@ -142,6 +172,9 @@
          <property name="text">
           <string>9</string>
          </property>
+         <property name="shortcut">
+          <string>9</string>
+         </property>
         </widget>
        </item>
        <item row="1" column="0">
@@ -153,6 +186,9 @@
           </sizepolicy>
          </property>
          <property name="text">
+          <string>4</string>
+         </property>
+         <property name="shortcut">
           <string>4</string>
          </property>
         </widget>
@@ -168,6 +204,9 @@
          <property name="text">
           <string>1</string>
          </property>
+         <property name="shortcut">
+          <string>1</string>
+         </property>
         </widget>
        </item>
        <item row="2" column="1">
@@ -179,6 +218,9 @@
           </sizepolicy>
          </property>
          <property name="text">
+          <string>2</string>
+         </property>
+         <property name="shortcut">
           <string>2</string>
          </property>
         </widget>

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Fri 6. Jan 20:19:43 2012
+** Created: Sun 8. Jan 23:40:18 2012
 **      by: Qt User Interface Compiler version 4.7.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -57,6 +57,7 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(248, 381);
+        MainWindow->setStyleSheet(QString::fromUtf8(""));
         actionEdit = new QAction(MainWindow);
         actionEdit->setObjectName(QString::fromUtf8("actionEdit"));
         centralWidget = new QWidget(MainWindow);
@@ -134,6 +135,7 @@ public:
         pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
         sizePolicy.setHeightForWidth(pushButton_7->sizePolicy().hasHeightForWidth());
         pushButton_7->setSizePolicy(sizePolicy);
+        pushButton_7->setStyleSheet(QString::fromUtf8(""));
 
         gridLayout->addWidget(pushButton_7, 0, 0, 1, 1);
 
@@ -194,17 +196,29 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
         actionEdit->setText(QApplication::translate("MainWindow", "Edit", 0, QApplication::UnicodeUTF8));
         pushButton_0->setText(QApplication::translate("MainWindow", "0", 0, QApplication::UnicodeUTF8));
+        pushButton_0->setShortcut(QApplication::translate("MainWindow", "0", 0, QApplication::UnicodeUTF8));
         pushButton_5->setText(QApplication::translate("MainWindow", "5", 0, QApplication::UnicodeUTF8));
+        pushButton_5->setShortcut(QApplication::translate("MainWindow", "5", 0, QApplication::UnicodeUTF8));
         pushButton_dot->setText(QApplication::translate("MainWindow", ".", 0, QApplication::UnicodeUTF8));
+        pushButton_dot->setShortcut(QApplication::translate("MainWindow", ".", 0, QApplication::UnicodeUTF8));
         pushButton_6->setText(QApplication::translate("MainWindow", "6", 0, QApplication::UnicodeUTF8));
+        pushButton_6->setShortcut(QApplication::translate("MainWindow", "6", 0, QApplication::UnicodeUTF8));
         pushButton_del->setText(QApplication::translate("MainWindow", "Del", 0, QApplication::UnicodeUTF8));
+        pushButton_del->setShortcut(QApplication::translate("MainWindow", "Backspace", 0, QApplication::UnicodeUTF8));
         pushButton_8->setText(QApplication::translate("MainWindow", "8", 0, QApplication::UnicodeUTF8));
+        pushButton_8->setShortcut(QApplication::translate("MainWindow", "8", 0, QApplication::UnicodeUTF8));
         pushButton_3->setText(QApplication::translate("MainWindow", "3", 0, QApplication::UnicodeUTF8));
+        pushButton_3->setShortcut(QApplication::translate("MainWindow", "3", 0, QApplication::UnicodeUTF8));
         pushButton_7->setText(QApplication::translate("MainWindow", "7", 0, QApplication::UnicodeUTF8));
+        pushButton_7->setShortcut(QApplication::translate("MainWindow", "7", 0, QApplication::UnicodeUTF8));
         pushButton_9->setText(QApplication::translate("MainWindow", "9", 0, QApplication::UnicodeUTF8));
+        pushButton_9->setShortcut(QApplication::translate("MainWindow", "9", 0, QApplication::UnicodeUTF8));
         pushButton_4->setText(QApplication::translate("MainWindow", "4", 0, QApplication::UnicodeUTF8));
+        pushButton_4->setShortcut(QApplication::translate("MainWindow", "4", 0, QApplication::UnicodeUTF8));
         pushButton_1->setText(QApplication::translate("MainWindow", "1", 0, QApplication::UnicodeUTF8));
+        pushButton_1->setShortcut(QApplication::translate("MainWindow", "1", 0, QApplication::UnicodeUTF8));
         pushButton_2->setText(QApplication::translate("MainWindow", "2", 0, QApplication::UnicodeUTF8));
+        pushButton_2->setShortcut(QApplication::translate("MainWindow", "2", 0, QApplication::UnicodeUTF8));
         menuSettings->setTitle(QApplication::translate("MainWindow", "Settings", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 

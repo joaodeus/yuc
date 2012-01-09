@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Fri 6. Jan 20:19:45 2012
+** Created: Sun 8. Jan 23:40:18 2012
 **      by: The Qt Meta Object Compiler version 62 (Qt 4.7.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        5,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -36,6 +36,8 @@ static const uint qt_meta_data_MainWindow[] = {
       72,   67,   11,   11, 0x08,
      119,  113,   11,   11, 0x08,
      172,  167,   11,   11, 0x08,
+     232,   11,   11,   11, 0x08,
+     263,   11,   11,   11, 0x08,
 
        0        // eod
 };
@@ -46,6 +48,8 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "on_comboBox_currentIndexChanged(QString)\0"
     "index\0on_comboBox_categories_currentIndexChanged(int)\0"
     "item\0on_tableWidget_units_results_itemChanged(QTableWidgetItem*)\0"
+    "setTextfromBtnClicked(QString)\0"
+    "clicked_del()\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -82,9 +86,11 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 2: on_comboBox_currentIndexChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 3: on_comboBox_categories_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 4: on_tableWidget_units_results_itemChanged((*reinterpret_cast< QTableWidgetItem*(*)>(_a[1]))); break;
+        case 5: setTextfromBtnClicked((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 6: clicked_del(); break;
         default: ;
         }
-        _id -= 5;
+        _id -= 7;
     }
     return _id;
 }

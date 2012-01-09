@@ -250,6 +250,7 @@ bool Calculadora::isEquation_assignment(QString &expression)
 //return's the 2 variables in list_var
 bool Calculadora::isConvertion_equation(QString &expression, QStringList &list_var)
 {
+    expression.remove(" ");
     QStringList Fx_Gx=expression.split("=");
     //check if it's a equation like f(x)=g(x)
     //Fx_Gx[0] will be f(x) and Fx_Gx[1] will be g(x)

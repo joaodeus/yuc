@@ -12,6 +12,7 @@ public:
      bool setConvertion_and_Units(QString m_convertion);
      int getUnitsCount(){return m_units.size();}
      QString getUnitsAt(int i);
+     QString getConvertionsAt(int i);
      void removeAll();
      QStringList setValue(QString value, int unit_index);
 
