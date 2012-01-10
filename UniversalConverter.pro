@@ -31,7 +31,8 @@ SOURCES += main.cpp mainwindow.cpp \
     math/calculadora.cpp \
     math/complexdata.cpp \
     math/complexo.cpp \
-    math/array_math.cpp
+    math/array_math.cpp \
+    categories_dlg.cpp
 HEADERS += mainwindow.h \
     unitsettings.h \
     categories_units/categories_units.h \
@@ -41,9 +42,11 @@ HEADERS += mainwindow.h \
     math/calculadora.h \
     math/complexdata.h \
     math/complexo.h \
-    math/array_math.h
+    math/array_math.h \
+    categories_dlg.h
 FORMS += mainwindow.ui \
-    unitsettings.ui
+    unitsettings.ui \
+    categories_dlg.ui
 
 # Please do not modify the following two lines. Required for deployment.
 include(deployment.pri)
