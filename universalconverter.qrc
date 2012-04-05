@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/converter.png</file>
+        <file>images/converter_ico.ico</file>
+        <file>help/Yuc.html</file>
+        <file>help/about.html</file>
+        <file>help/yuc_categories.png</file>
+        <file>help/yuc_temperature.png</file>
+        <file>help/yuc_units.png</file>
+        <file>help/yuc_edit_units.png</file>
+        <file>help/yuc_farm_example.png</file>
+    </qresource>
+</RCC>

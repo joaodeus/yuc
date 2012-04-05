@@ -36,7 +36,7 @@ bool setTableWidget(QTableWidget &table, Categories_units &units)
             table.setItem(l,1, newItem);
             table.item(l,1)->setText("");
         }
-        table.item(l,1)->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
+        //table.item(l,1)->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
 
     }
 

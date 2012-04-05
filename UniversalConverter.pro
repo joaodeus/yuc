@@ -4,7 +4,26 @@
 # dir1.source = mydir
 DEPLOYMENTFOLDERS = # file1 dir1
 
-symbian:TARGET.UID3 = 0xE4D8E374
+#symbian:TARGET.UID3 = 0xE4D8E374
+
+symbian:
+{
+    VERSION = 1.0.0
+    ICON = UniversalConverter.svg
+
+    TARGET.UID3 = 0x20046E91
+    #TARGET.UID3 = 0xE4D8E374
+
+    vendorinfo = \
+    "%{\"Joao de Deus\"}" \
+    ":\"Joao de Deus\""
+
+    my_deployment.pkg_prerules = vendorinfo
+    DEPLOYMENT += my_deployment
+    DEPLOYMENT.installer_header = 0x2002CCCF
+
+}
+
 
 # Smart Installer package's UID
 # This UID is from the protected range 
@@ -32,7 +51,11 @@ SOURCES += main.cpp mainwindow.cpp \
     math/complexdata.cpp \
     math/complexo.cpp \
     math/array_math.cpp \
-    categories_dlg.cpp
+    categories_dlg.cpp \
+    about_dlg.cpp \
+    format_dlg.cpp \
+    help_dlg.cpp \
+    settings_dlg.cpp
 HEADERS += mainwindow.h \
     unitsettings.h \
     categories_units/categories_units.h \
@@ -43,11 +66,27 @@ HEADERS += mainwindow.h \
     math/complexdata.h \
     math/complexo.h \
     math/array_math.h \
-    categories_dlg.h
+    categories_dlg.h \
+    about_dlg.h \
+    format_dlg.h \
+    help_dlg.h \
+    settings_dlg.h
 FORMS += mainwindow.ui \
     unitsettings.ui \
-    categories_dlg.ui
+    categories_dlg.ui \
+    about_dlg.ui \
+    format_dlg.ui \
+    help_dlg.ui \
+    settings_dlg.ui
 
 # Please do not modify the following two lines. Required for deployment.
 include(deployment.pri)
 qtcAddDeployment()
+
+RESOURCES += \
+    universalconverter.qrc
+
+QT      +=  webkit
+
+TARGET = "Yuc"
+DEPLOYMENT.display_name = "Yuc"

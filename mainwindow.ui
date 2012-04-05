@@ -6,23 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>248</width>
+    <width>275</width>
     <height>381</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Converter</string>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="0" column="0">
-     <widget class="QComboBox" name="comboBox_categories"/>
-    </item>
-    <item row="2" column="0">
-     <widget class="QFrame" name="frame">
+    <item row="5" column="0" colspan="3">
+     <widget class="QFrame" name="frame_keypad">
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
@@ -30,7 +27,7 @@
        <enum>QFrame::Raised</enum>
       </property>
       <layout class="QGridLayout" name="gridLayout">
-       <item row="3" column="0">
+       <item row="5" column="0">
         <widget class="QPushButton" name="pushButton_0">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Ignored" vsizetype="Maximum">
@@ -46,7 +43,7 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="1">
+       <item row="3" column="1">
         <widget class="QPushButton" name="pushButton_5">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Ignored" vsizetype="Maximum">
@@ -62,7 +59,7 @@
          </property>
         </widget>
        </item>
-       <item row="3" column="1">
+       <item row="5" column="1">
         <widget class="QPushButton" name="pushButton_dot">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Ignored" vsizetype="Maximum">
@@ -78,7 +75,7 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="2">
+       <item row="3" column="2">
         <widget class="QPushButton" name="pushButton_6">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Ignored" vsizetype="Maximum">
@@ -94,23 +91,7 @@
          </property>
         </widget>
        </item>
-       <item row="3" column="2">
-        <widget class="QPushButton" name="pushButton_del">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Ignored" vsizetype="Maximum">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="text">
-          <string>Del</string>
-         </property>
-         <property name="shortcut">
-          <string>Backspace</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
+       <item row="2" column="1">
         <widget class="QPushButton" name="pushButton_8">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Ignored" vsizetype="Maximum">
@@ -126,7 +107,7 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="2">
+       <item row="4" column="2">
         <widget class="QPushButton" name="pushButton_3">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Ignored" vsizetype="Maximum">
@@ -142,7 +123,7 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="0">
+       <item row="2" column="0">
         <widget class="QPushButton" name="pushButton_7">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Ignored" vsizetype="Maximum">
@@ -161,7 +142,7 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="2">
+       <item row="2" column="2">
         <widget class="QPushButton" name="pushButton_9">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Ignored" vsizetype="Maximum">
@@ -177,7 +158,7 @@
          </property>
         </widget>
        </item>
-       <item row="1" column="0">
+       <item row="3" column="0">
         <widget class="QPushButton" name="pushButton_4">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Ignored" vsizetype="Maximum">
@@ -193,7 +174,7 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="0">
+       <item row="4" column="0">
         <widget class="QPushButton" name="pushButton_1">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Ignored" vsizetype="Maximum">
@@ -209,7 +190,7 @@
          </property>
         </widget>
        </item>
-       <item row="2" column="1">
+       <item row="4" column="1">
         <widget class="QPushButton" name="pushButton_2">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Ignored" vsizetype="Maximum">
@@ -225,11 +206,127 @@
          </property>
         </widget>
        </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="pushButton_E">
+         <property name="text">
+          <string>E</string>
+         </property>
+         <property name="shortcut">
+          <string>E</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="pushButton_minus">
+         <property name="text">
+          <string>-</string>
+         </property>
+         <property name="shortcut">
+          <string>-</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="pushButton_del">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Ignored" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>&lt;&lt;</string>
+         </property>
+         <property name="shortcut">
+          <string>Backspace</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <widget class="QPushButton" name="pushButton_clear">
+         <property name="text">
+          <string>Clear</string>
+         </property>
+         <property name="shortcut">
+          <string>C</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>
-    <item row="1" column="0">
-     <widget class="QTableWidget" name="tableWidget_units_results"/>
+    <item row="3" column="0" colspan="3">
+     <widget class="QTableWidget" name="tableWidget_units_results">
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="pushButton_categories">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Units</string>
+      </property>
+      <property name="shortcut">
+       <string>U</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QPushButton" name="pushButton_plus_minus">
+      <property name="text">
+       <string>+/-</string>
+      </property>
+      <property name="shortcut">
+       <string>+</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QPushButton" name="pushButton_update">
+      <property name="text">
+       <string>Update</string>
+      </property>
+      <property name="shortcut">
+       <string>F5</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QPushButton" name="pushButton_show_hide">
+      <property name="text">
+       <string>Hide</string>
+      </property>
+      <property name="shortcut">
+       <string>H</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="pushButton_settings">
+      <property name="text">
+       <string>Settings</string>
+      </property>
+      <property name="shortcut">
+       <string>S</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QPushButton" name="pushButton_exit">
+      <property name="text">
+       <string>Exit</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -238,25 +335,76 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>248</width>
+     <width>275</width>
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuSettings">
+   <widget class="QMenu" name="menuSettings_2">
     <property name="title">
      <string>Settings</string>
     </property>
-    <addaction name="actionEdit"/>
+    <addaction name="actionSettings"/>
+    <addaction name="actionReset"/>
    </widget>
-   <addaction name="menuSettings"/>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuSettings_2"/>
+   <addaction name="menuAbout"/>
   </widget>
-  <action name="actionEdit">
+  <action name="actionSettings">
    <property name="text">
-    <string>Edit</string>
+    <string>Settings</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionFormat">
+   <property name="text">
+    <string>Format</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
    </property>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>pushButton_clear</tabstop>
+  <tabstop>pushButton_dot</tabstop>
+  <tabstop>pushButton_0</tabstop>
+  <tabstop>pushButton_1</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>pushButton_3</tabstop>
+  <tabstop>pushButton_4</tabstop>
+  <tabstop>pushButton_5</tabstop>
+  <tabstop>pushButton_6</tabstop>
+  <tabstop>pushButton_7</tabstop>
+  <tabstop>pushButton_8</tabstop>
+  <tabstop>pushButton_9</tabstop>
+  <tabstop>pushButton_E</tabstop>
+  <tabstop>pushButton_minus</tabstop>
+  <tabstop>pushButton_del</tabstop>
+  <tabstop>pushButton_show_hide</tabstop>
+  <tabstop>pushButton_plus_minus</tabstop>
+  <tabstop>pushButton_update</tabstop>
+  <tabstop>pushButton_categories</tabstop>
+  <tabstop>tableWidget_units_results</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

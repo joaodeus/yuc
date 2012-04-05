@@ -22,4 +22,7 @@ public:
 
 };
 
+QDataStream & operator<< (QDataStream& stream, const Categories_units& m_categorie);
+QDataStream & operator>> (QDataStream& stream, Categories_units& m_categorie);
+
 #endif // CATEGORIES_UNITS_H
