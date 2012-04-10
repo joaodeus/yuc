@@ -1,4 +1,4 @@
-# Add files and directories to ship with the application 
+# Add files and directories to ship with the application
 # by adapting the examples below.
 # file1.source = myfile
 # dir1.source = mydir
@@ -33,7 +33,7 @@ symbian:
 #symbian:DEPLOYMENT.installer_header = 0x2002CCCF
 
 # Allow network access on Symbian
-symbian:TARGET.CAPABILITY += NetworkServices
+#symbian:TARGET.CAPABILITY += NetworkServices
 
 # If your application uses the Qt Mobility libraries, uncomment
 # the following lines and add the respective components to the 
@@ -86,7 +86,31 @@ qtcAddDeployment()
 RESOURCES += \
     universalconverter.qrc
 
+OTHER_FILES += \
+    resources/appicon.rc
+
 QT      +=  webkit
 
+symbian:
+{
 TARGET = "Yuc"
 DEPLOYMENT.display_name = "Yuc"
+}
+
+
+#icon
+win32:RC_FILE = resources\\appicon.rc
+
+macx:ICON = images/converter.icns
+
+
+#next line is for windows
+#RC_FILE = appicon.rc
+#next line is for mac
+#ICON = images/calculadora.icns
+
+
+#next line is for windows
+#RC_FILE = appicon.rc
+#next line is for mac
+#ICON = images/calculadora.icns

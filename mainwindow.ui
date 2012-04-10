@@ -6,12 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>275</width>
-    <height>381</height>
+    <width>283</width>
+    <height>426</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Converter</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="universalconverter.qrc">
+    <normaloff>:/images/converter.png</normaloff>:/images/converter.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -335,7 +339,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>275</width>
+     <width>283</width>
      <height>21</height>
     </rect>
    </property>
@@ -405,6 +409,8 @@
   <tabstop>pushButton_categories</tabstop>
   <tabstop>tableWidget_units_results</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="universalconverter.qrc"/>
+ </resources>
  <connections/>
 </ui>
